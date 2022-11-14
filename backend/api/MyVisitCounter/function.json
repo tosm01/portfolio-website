@@ -1,0 +1,41 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    },
+    {
+      "name": "counterDoc",
+      "type": "cosmosDB",
+      "databaseName": "PortfolioWebsite",
+      "collectionName": "VisitCounter",
+      "id": "1",
+      "partitionKey": "1",
+      "connectionStringSetting": "CounterConnectionString",
+      "direction": "in"
+    },
+    {
+      "name": "updatedCounterDoc",
+      "type": "cosmosDB",
+      "databaseName": "PortfolioWebsite",
+      "collectionName": "VisitCounter",
+      "id": "1",
+      "partitionKey": "1",
+      "createIfNotExists": "true",
+      "connectionStringSetting": "CounterConnectionString",
+      "direction": "out"
+    }
+  ]
+}
