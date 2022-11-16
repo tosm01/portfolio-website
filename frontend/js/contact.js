@@ -6,8 +6,8 @@ async function submitContactForm() {
 
     body = `${message}\nName: ${sender_name}\nEmail: ${email}`;
 
-    let url = 'https://myazureemailservice.azurewebsites.net/api/v1/email';
-    let data = { "subject": subject, "body": body, "recipient": "tahaozairo@gmail.com", "sender": "PortfolioContact@12c6ff0e-b23f-4a55-8168-68b650da85cd.azurecomm.net" };
+    let url = "https://myazureemailservice.azurewebsites.net/api/v1/email";
+    let data = { "subject": subject, "body": body, "recipient": "tahaozairo@gmail.com", "sender": "PortfolioContact@9260970b-a640-44a8-9c43-02105dceabe8.azurecomm.net" };
 
     try {
         let res = await fetch(url, {
