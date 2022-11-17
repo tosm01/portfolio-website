@@ -7,7 +7,7 @@ async function submitContactForm() {
     body = `${message}\nName: ${sender_name}\nEmail: ${email}`;
 
     let url = "https://myazureemailservice.azurewebsites.net/api/v1/email";
-    let data = { "subject": subject, "body": body, "recipient": "tahaozairo@gmail.com", "sender": "PortfolioContact@9260970b-a640-44a8-9c43-02105dceabe8.azurecomm.net" };
+    let data = { "subject": subject, "body": body, "recipients": ["tahaozairo@gmail.com"], "sender": "PortfolioContact@9260970b-a640-44a8-9c43-02105dceabe8.azurecomm.net" };
 
     try {
         let res = await fetchWithTimeout(url, {
@@ -16,7 +16,7 @@ async function submitContactForm() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
-            timeout: 3000
+            timeout: 5000
         });
 
         if (res.ok) {
