@@ -10,12 +10,13 @@ async function submitContactForm() {
     let data = { "subject": subject, "body": body, "recipient": "tahaozairo@gmail.com", "sender": "PortfolioContact@9260970b-a640-44a8-9c43-02105dceabe8.azurecomm.net" };
 
     try {
-        let res = await fetch(url, {
+        let res = await fetchWithTimeout(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
+            timeout: 3000
         });
 
         if (res.ok) {
@@ -27,5 +28,18 @@ async function submitContactForm() {
         alert("Error: Sending the Email failed. Please try again.");
     }
 }
+
+async function fetchWithTimeout(resource, options = {}) {
+    const { timeout = 8000 } = options;
+    
+    const controller = new AbortController();
+    const id = setTimeout(() => controller.abort(), timeout);
+    const response = await fetch(resource, {
+      ...options,
+      signal: controller.signal  
+    });
+    clearTimeout(id);
+    return response;
+  }
 
 document.getElementById("submitButton").addEventListener("click", submitContactForm);
