@@ -12508,7 +12508,14 @@ h5,
 .page .heading {
   font-weight: 800;
   font-size: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  color: #3e64ff;
+}
+
+.page .subheading {
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 15px;
   color: #3e64ff;
 }
 
@@ -13784,12 +13791,12 @@ textarea.form-control {
   color: #062c33;
 }
 
-.company-logo {
+.sq60-logo {
   height: 50px;
   width: 50px
 }
 
-.monash-logo {
+.sq65-logo {
   height: 65px;
   width: 65px
 }
