@@ -13791,9 +13791,14 @@ textarea.form-control {
   color: #062c33;
 }
 
-.sq60-logo {
+.sq50-logo {
   height: 50px;
   width: 50px
+}
+
+.sq60-logo {
+  height: 60px;
+  width: 60px
 }
 
 .sq65-logo {
