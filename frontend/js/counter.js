@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', event => getVisitCount());
 
-const functionAPI = "https://myvisitcounter.azurewebsites.net/api/MyVisitCounter?code=IjOE7bUdJ84IttmG1DVZLvhAU3FnGm61LdcS3t3YqfdiAzFunENVpg==";
+const functionAPI = "https://myvisitcounter.azurewebsites.net/api/MyVisitCounter?code=ygvhwLXj70a2twyzJ8kVUSJV9h9Q5A7LR2PPRbtRv0NWAzFuT4iVWw==";
 
 const getVisitCount = () => {
     let count = 0;
